@@ -541,6 +541,7 @@ OC.Uploader.prototype = _.extend({
 		if (_.isString(data)) {
 			return this._uploads[data];
 		} else if (data.uploadId) {
+			this._uploads[data.uploadId].data = data;
 			return this._uploads[data.uploadId];
 		}
 		return null;
